@@ -6,6 +6,7 @@
 #
 #    http://shiny.rstudio.com/
 #
+source('echantillonnage')
 library(ggplot2)
 library(dplyr)
 library(shiny)
