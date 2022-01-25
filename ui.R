@@ -87,23 +87,23 @@ p("Dans ce projet, nous allons modéliser la probabilité de défaut en utilisan
                               h4("Les données après le nettoyage"),
                               p("Nous avons des valeurs manquantes dans notre base de données, qui peuvent biaiser nos modèles. Ainsi, nous avons 
              procéder au nettoyage de la base de données et nous sommes passer de 150000 observations à 120269 observations."),
-                              p("Ci-dessous, un extrait de notre nouvelle base de donnees:"),
+                              p("Ci-dessous, un extrait de notre nouvelle base de données:"),
                               h5("Apres le nettoyage:"),
                               dataTableOutput('ClenTable'), 
                               
-                              h4("Repartition de la variable cible 'SeriousDlqin2yrs'"), 
-                              p("Une premiere analyse des frequences de notre variable de reponse, 
-              ayant pour modalite 1 si l'individu a connu l'evenement et 0 sinon nous adresse le constat suivant : 
-            91% des individus de la base de donnees n'ont pas connu l'evenement, 
-             et seulement 9% sont des mauvais payeurs :"),
+                              h4("Répartition de la variable cible 'SeriousDlqin2yrs'"), 
+                              p("Une première analyse des fréquences de notre variable de réponse, 
+              ayant pour modalité 1 si l'individu fait défaut et 0 sinon, nous adresse le constat suivant : 
+            90% des individus de la base de donnees n'ont pas fait défaut, 
+             et seulement 10% sont des mauvais payeurs :"),
                               fluidRow(
                                   column( width = 6 , plotOutput(outputId = "hist2")),
                                   column( width = 6, plotOutput(outputId = "hist3"))),
                               
-                              p("Nous ne faisons pas face a une base de donnees avec des 
-            donnees desequilibre (un probleme d'evenement rare). Danc, on passe directement au 
-            partionnement du jeu de donnees."),
-                              h4("Echantillon d'apprentissage & de validation"),
+                              p("Nous ne faisons pas face à une base de donnees avec des 
+            données déséquilibrées (un problème d'événement rare). Donc, on passe directement au 
+            partionnement du jeu de données."),
+                              h4("Échantillon d'apprentissage & de validation"),
                               p("La première étape consiste à partitionner notre échantillon en deux sous-echantillons : "),
                              p(" Un échantillon d’apprentissage sur lequel nous sélectionnons les variables et faisons l’estimation. 
              Il est représentatif des données, est constitué de 75% des observations et est stratifié par le taux de défaut moyen."), 
